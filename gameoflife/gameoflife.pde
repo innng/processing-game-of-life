@@ -6,7 +6,7 @@ float rndProb = 0.3;
 
 Grid grid;
 
-int running, menu;
+int running, menu, rainbow, carnival;
 
 color bg;
 color border;
@@ -25,6 +25,8 @@ void setup() {
 
     running = 0;
     menu = 1;
+    rainbow = 0;
+    carnival = 0;
 
     grid = new Grid(height/cellSize, width/cellSize, cellSize);
 

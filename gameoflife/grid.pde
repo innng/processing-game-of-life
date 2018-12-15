@@ -44,28 +44,6 @@ class Grid {
         }
     }
 
-    void killAll() {
-        for(int c = 0; c < this.col; c++) {
-            for(int r = 0; r < this.row; r++) {
-                this.cells[c][r].state = 0;
-                this.cells[c][r].neighbors = 0;
-            }
-        }
-    }
-
-    int allDead() {
-        int allDead = 1;
-
-        for(int c = 0; c < this.col; c++)
-            for(int r = 0; r < this.row; r++)
-                if(this.cells[c][r].state == 1) {
-                    allDead = 0;
-                    return allDead;
-                }
-
-        return allDead;
-    }
-
     void epoch() {
         for(int c = 0; c < this.col; c++) {
             for(int r = 0; r < this.row; r++) {
@@ -79,7 +57,46 @@ class Grid {
             }
         }
 
-        fillGrid();
+        if(rainbow == 1)
+            rainbow();
+        else if(carnival == 1)
+            carnival();
+        else
+            fillGrid();
+
+    }
+
+    void rainbow() {
+        colorMode(HSB, 100);
+
+        for(int c = 0; c < this.col; c++) {
+            for(int r = 0; r < this.row; r++) {
+                int i = c;
+                if(i > 255)
+                    i = 0;
+                element = color(c, 255,255);
+
+                this.cells[c][r].show();
+            }
+        }
+        colorMode(RGB, 100);
+    }
+
+    void carnival() {
+        colorMode(HSB, 100);
+
+        for(int c = 0; c < this.col; c++) {
+            for(int r = 0; r < this.row; r++) {
+                float rnd = random(1);
+                if(rnd < 0.5)
+                    element = color(c, 255,255);
+                else
+                    element = color(r, 255,255);
+
+                this.cells[c][r].show();
+            }
+        }
+        colorMode(RGB, 100);
     }
 }
 

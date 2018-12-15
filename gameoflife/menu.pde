@@ -36,7 +36,7 @@ void showMenu() {
     text("6 - orange", width/2, 380);
     text("7 - purple", width/2, 410);
     text("8 - gray", width/2, 440);
-    text("9 - white", width/2, 470);
+    text("9 - carnival", width/2, 470);
     text("0 - raibow", width/2, 500);
 }
 
@@ -67,35 +67,91 @@ void keyPressed() {
         running = 1;
     }
     // 0 - raibow
-    else if(keyCode == 48)
-        element = color(0);
+    else if(keyCode == 48 && running == 1) {
+        if(carnival == 1)
+            carnival = 0;
+
+        rainbow = 1;
+    }
     // 1 - red
-    else if(keyCode == 49)
+    else if(keyCode == 49 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(164,8,2);
+    }
     // 2 - blue
-    else if(keyCode == 50)
+    else if(keyCode == 50 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(22,147,165);
+    }
     // 3 - green
-    else if(keyCode == 51)
+    else if(keyCode == 51 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(195,255,104);
+    }
     // 4 - pink
-    else if(keyCode == 52)
+    else if(keyCode == 52 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(254,67,101);
+    }
     // 5 - yellow
-    else if(keyCode == 53)
+    else if(keyCode == 53 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(251,184,41);
+    }
     // 6 - orange
-    else if(keyCode == 54)
+    else if(keyCode == 54 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(255,102,0);
+    }
     // 7 - purple
-    else if(keyCode == 55)
-        element = color(66,9,67);
+    else if(keyCode == 55 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
+        element = color(175,63,198);
+    }
     // 8 - gray
-    else if(keyCode == 56)
+    else if(keyCode == 56 && running == 1) {
+        if(rainbow == 1 || carnival == 1) {
+            carnival = 0;
+            rainbow = 0;
+        }
+
         element = color(85,98,112);
-    // 9 - white ok
-    else if(keyCode == 57)
-        element = color(252,251,2270);
+    }
+    // 9 - carnival
+    else if(keyCode == 57 && running == 1) {
+        if(rainbow == 1)
+            rainbow = 0;
+
+        carnival = 1;
+    }
 }
 
 void mouseClicked() {
