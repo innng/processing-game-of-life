@@ -80,7 +80,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(164,8,2);
+        element = colors[1];
     }
     // 2 - blue
     else if(keyCode == 50 && running == 1) {
@@ -89,7 +89,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(22,147,165);
+        element = colors[2];
     }
     // 3 - green
     else if(keyCode == 51 && running == 1) {
@@ -98,7 +98,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(195,255,104);
+        element = colors[3];
     }
     // 4 - pink
     else if(keyCode == 52 && running == 1) {
@@ -107,7 +107,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(254,67,101);
+        element = colors[4];
     }
     // 5 - yellow
     else if(keyCode == 53 && running == 1) {
@@ -116,7 +116,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(251,184,41);
+        element = colors[5];
     }
     // 6 - orange
     else if(keyCode == 54 && running == 1) {
@@ -125,7 +125,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(255,102,0);
+        element = colors[6];
     }
     // 7 - purple
     else if(keyCode == 55 && running == 1) {
@@ -134,7 +134,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(175,63,198);
+        element = colors[7];
     }
     // 8 - gray
     else if(keyCode == 56 && running == 1) {
@@ -143,7 +143,7 @@ void keyPressed() {
             rainbow = 0;
         }
 
-        element = color(85,98,112);
+        element = colors[8];
     }
     // 9 - carnival
     else if(keyCode == 57 && running == 1) {
