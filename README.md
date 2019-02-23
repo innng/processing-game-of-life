@@ -1,3 +1,3 @@
 Game of Life
 
-Basic Conwell's Game of Life made in Processing.
+Basic Conway's Game of Life made in Processing.
